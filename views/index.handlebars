@@ -1,38 +1,44 @@
-<h1>Cats!</h1>
+<div id ="headerSection">
+  <h2>Eat-Da-Burger: Hamburger Emporium App</h2>
+</div>
 
-<h2>Cats that are not sleepy!</h2>
+<div id="middleSection">
 
-<ul>
-  {{#each cats}}
-    {{#unless sleepy}}
-      {{> cats/cat-block sleep=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
+  <!-- Left  -->
+  <div class="leftMiddle">
+    <div class="uneaten center">
 
-<h2>Cats that are sleepy!</h2>
+      {{#each burger}}
+        {{#unless devoured}}
+          <li>
+            {{burger_name}}
+            <button class="burgerBlock" data-id="{{id}}" data-eaten="{{devoured}}">
+            {{#if devoured}}Eat Me !{{else}} Order Again!{{/if}}
+            </button>
+          </li>
+        {{/unless}}
+      {{/each}}
 
-<ul>
-  {{#each cats}}
-    {{#if sleepy}}
-      {{> cats/cat-block sleep=false}}
-    {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Add a Cat</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="ca">Cat Name:</label>
-    <input type="text" id="ca" name="name">
+    </div>
   </div>
 
-  <div class="form-group">
-    <label for="slee">Sleepy?</label><br>
-    <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
-    <input type="radio" name="sleepy" value="0"> Awake
+  <!-- Center -->
+  <div class="centerMiddle">
+    <div class="center">
+      <input id="burgerName" type="text" placeholder="Your Burger: " data-eaten="0">
+      <button id="addBurger" type="button">Add Your Burger to the Order Queue</button>
+    </div>
   </div>
 
-  <button type="submit">Add Cat</button>
-</form>
+  <!-- Right -->
+  <div class="rightMiddle">
+    <div class="eaten center">
+      {{#each burger}}
+        {{#if devoured}}
+          {{> burgers/burgerBlock devoured=0}}
+        {{/if}}
+      {{/each}}
+    </div>
+  </div>
+
+</div>

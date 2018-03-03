@@ -1,6 +1,5 @@
-INSERT INTO cats (name) VALUES ('Farley');
-INSERT INTO cats (name) VALUES ('Moose');
-INSERT INTO cats (name, sleepy) VALUES ('sergeant', true);
-INSERT INTO cats (name, sleepy) VALUES ('Snikers', true);
-INSERT INTO cats (name, sleepy) VALUES ('Mr. Snuggles', true);
-INSERT INTO cats (name) VALUES ('Bob');
+INSERT INTO burgers(burger_name) VALUES ('Mushroom Swiss Burger');
+INSERT INTO burgers(burger_name) VALUES ('Bacon Bleu Burger');
+INSERT INTO burgers(burger_name) VALUES ('Tofurkey Burger');
+INSERT INTO burgers(burger_name) VALUES ('Double Cheeseburger');
+INSERT INTO burgers(burger_name) VALUES ('Hamburger Lettuce Tomato');
