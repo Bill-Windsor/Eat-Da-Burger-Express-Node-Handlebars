@@ -1,19 +1,62 @@
-li {
-  padding: 5px;
-  margin: 5px;
-  background: #faebd7;
+* {
+	box-sizing: border-box;
 }
 
-.label {
-  font-weight: bold;
+
+body {
+	background-color: lightblue;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 12px;
+	position: relative;
 }
 
-.create-update-form {
-  padding: 5px;
-  margin: 5px;
-  background: aqua;
+.container {
+	text-align: center;
 }
 
-.form-group {
-  margin-bottom: 5px;
+.submit-row {
+	text-align: center;
+}
+
+h1 {
+	text-align: center;
+	color: darkred;
+	letter-spacing: 2px;
+	margin-top: 5%;
+}
+
+h4 {
+	margin-top: 10%;
+	text-align: center;
+}
+
+img {
+	width: 10%;
+	margin-left: 40%;
+	margin-top: 5%;
+	margin-left: 40%;
+}
+
+form {
+	padding: 20px;
+}
+
+input#name {
+	width: 25%;
+	padding: 2%;
+}
+
+button.addBurgerButton {
+	position: absolute;
+	bottom: 10%;
+	left: 40%;
+	background-color: darkblue;
+    border: none;
+    color: white;
+    padding: 2%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 10%;
 }

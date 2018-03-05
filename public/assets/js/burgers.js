@@ -11,6 +11,7 @@ $(document).ready(function() {
     };
 
     $.post("/api/burger", burger).done(function(response) {
+      console.log("post to /api/burger in public>assets>burgers.js here");
 // Reload the page to get the updated list
       location.reload();
     });
@@ -20,14 +21,15 @@ $(document).ready(function() {
 // Update Burger with button submit
   $(".burgerBlock").on("click", function() {
 
-    const burgerID = $(this).data("id");
-    const devoured = $(this).data("eaten");
+    var burgerID = $(this).data("id");
+    console.log("Burger ID value = " + burgerID);
 
-    const burgerUpdate = {
+    var devoured = $(this).data("eaten");
+    console.log("'devoured' Boolean value = " + devoured);
+
+    var burgerUpdate = {
       "devoured": devoured
     };
-
-    console.log("button id is " + burgerID);
 
     $.ajax("/api/burger/" + burgerID, {
       type: "PUT",
