@@ -1,21 +1,19 @@
 {
-  "name": "mvc_design",
+  "name": "eat-da-burger-express-node-handlebars",
   "version": "1.0.0",
-  "description": "",
+  "description": "Eat-da-Burger app",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.14.2",
-    "express": "^4.13.3",
-    "express-handlebars": "^2.0.1",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
     "handlebars": "^4.0.11",
-    "mysql": "^2.10.2"
-  },
-  "devDependencies": {
-    "handlebars-helper-css": "^0.1.0"
+    "method-override": "^2.3.10",
+    "mysql": "^2.15.0"
   }
 }

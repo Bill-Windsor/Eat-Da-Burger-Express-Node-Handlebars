@@ -2,9 +2,11 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const exphbs = require("express-handlebars");
+const methodOverride = require("method-override");
 
 const app = express();
 
+// Configure default port for Express and Heroku
 var port = process.env.PORT || 3000;
 
 // Add bodyParser middleware to Express
@@ -12,6 +14,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
 
+// Override with POST having ?_method=DELETE
+app.use(methodOverride('_method'))
 // Set Handlebars.
 var exphbs = require("express-handlebars");
 
